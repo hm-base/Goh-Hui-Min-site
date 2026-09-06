@@ -13,7 +13,7 @@
 <!-- Persistent "not live" banner -->
 <div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
   📸 Static demo snapshot — not a live feed · Data frozen at generation time · Last updated:
-  <strong>2026-09-06 21:54 SGT</strong>
+  <strong>2026-09-06 22:20 SGT</strong>
 </div>
 
 <!-- One-time modal -->
@@ -23,7 +23,7 @@
     <p class="text-sm text-[#0F172A]/65 leading-relaxed mb-4">
       SG Transit Liveability Index is a real-time data pipeline (live taxi/bus polling,
       ML forecasting, anomaly detection). This page shows real data captured at
-      <strong>2026-09-06 21:54 SGT</strong> — it will not change again until the page is regenerated.
+      <strong>2026-09-06 22:20 SGT</strong> — it will not change again until the page is regenerated.
       The interactive version (live map, forecasts, alerts) runs locally.
     </p>
     <button onclick="document.getElementById('snapshot-modal').classList.add('hidden'); localStorage.setItem('sgSnapshotSeen','1')"
@@ -42,10 +42,26 @@
   <a href="../index.html" class="text-sm text-violet-600 font-medium hover:underline">&larr; Back to portfolio</a>
   <h1 class="text-3xl font-extrabold mt-4 mb-2">🏙️ SG Transit Liveability Index</h1>
   <p class="text-[#0F172A]/60 max-w-2xl">Real-time transit connectivity + HDB value-for-money scoring across
-  all 55 Singapore planning areas. Snapshot generated 2026-09-06 21:54 SGT.</p>
+  all 55 Singapore planning areas. Snapshot generated 2026-09-06 22:20 SGT.</p>
 </header>
 
 <main class="max-w-5xl mx-auto px-5 pb-16 space-y-8">
+
+  <section class="space-y-6">
+    <h2 class="font-bold text-lg">📷 The actual interactive dashboard</h2>
+    <p class="text-sm text-[#0F172A]/50 -mt-4">Real screenshots of the live app (not reproducible here — GitHub Pages
+    has no backend to run it). The tables below this are real live data, updated whenever this snapshot is regenerated.</p>
+    <figure class="bg-white rounded-2xl border border-[#DDD6FE]/40 p-3">
+      <img src="screenshots/overview.png" alt="Overview tab — live KPIs, connectivity gauge, and the district mini-map." class="w-full rounded-xl border border-[#DDD6FE]/30">
+      <figcaption class="text-xs text-[#0F172A]/50 mt-2 px-1">Overview tab — live KPIs, connectivity gauge, and the district mini-map.</figcaption>
+    </figure><figure class="bg-white rounded-2xl border border-[#DDD6FE]/40 p-3">
+      <img src="screenshots/24h_forecast.png" alt="24H Forecast tab — real 24-hour prediction, anomaly alerts, and model MAE/RMSE." class="w-full rounded-xl border border-[#DDD6FE]/30">
+      <figcaption class="text-xs text-[#0F172A]/50 mt-2 px-1">24H Forecast tab — real 24-hour prediction, anomaly alerts, and model MAE/RMSE.</figcaption>
+    </figure><figure class="bg-white rounded-2xl border border-[#DDD6FE]/40 p-3">
+      <img src="screenshots/map_housing.png" alt="Map & Housing Prices tab — full Value-for-Money map and ranking table." class="w-full rounded-xl border border-[#DDD6FE]/30">
+      <figcaption class="text-xs text-[#0F172A]/50 mt-2 px-1">Map & Housing Prices tab — full Value-for-Money map and ranking table.</figcaption>
+    </figure>
+  </section>
 
   <section class="grid grid-cols-3 gap-4">
     <div class="bg-white rounded-2xl border border-[#DDD6FE]/40 p-5 text-center">
@@ -53,11 +69,11 @@
       <div class="text-xs font-medium text-[#0F172A]/55 mt-1">Districts Monitored</div>
     </div>
     <div class="bg-white rounded-2xl border border-[#DDD6FE]/40 p-5 text-center">
-      <div class="text-3xl font-extrabold text-sky-500">36</div>
+      <div class="text-3xl font-extrabold text-sky-500">39</div>
       <div class="text-xs font-medium text-[#0F172A]/55 mt-1">Avg Connectivity Score</div>
     </div>
     <div class="bg-white rounded-2xl border border-[#DDD6FE]/40 p-5 text-center">
-      <div class="text-3xl font-extrabold text-emerald-500">53</div>
+      <div class="text-3xl font-extrabold text-emerald-500">56</div>
       <div class="text-xs font-medium text-[#0F172A]/55 mt-1">Avg Value-for-Money Score</div>
     </div>
   </section>
@@ -74,94 +90,94 @@
       </tr></thead>
       <tbody><tr class="border-t border-[#DDD6FE]/30">
           <td class="py-2 px-3 text-[#0F172A]/50">1</td>
-          <td class="py-2 px-3 font-semibold">Changi</td>
-          <td class="py-2 px-3">
-            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
-              53.9
-            </span>
-          </td>
-          <td class='py-2 px-3'>63/100</td>
-        </tr><tr class="border-t border-[#DDD6FE]/30">
-          <td class="py-2 px-3 text-[#0F172A]/50">2</td>
           <td class="py-2 px-3 font-semibold">Changi Bay</td>
           <td class="py-2 px-3">
             <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
-              49.5
+              55.0
             </span>
           </td>
-          <td class='py-2 px-3'>65/100</td>
+          <td class='py-2 px-3'>72/100</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">2</td>
+          <td class="py-2 px-3 font-semibold">Changi</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
+              53.4
+            </span>
+          </td>
+          <td class='py-2 px-3'>62/100</td>
         </tr><tr class="border-t border-[#DDD6FE]/30">
           <td class="py-2 px-3 text-[#0F172A]/50">3</td>
-          <td class="py-2 px-3 font-semibold">Boon Lay</td>
+          <td class="py-2 px-3 font-semibold">Newton</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
+              47.1
+            </span>
+          </td>
+          <td class='py-2 px-3'>61/100</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">4</td>
+          <td class="py-2 px-3 font-semibold">Bukit Timah</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
+              46.2
+            </span>
+          </td>
+          <td class='py-2 px-3'>59/100</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">5</td>
+          <td class="py-2 px-3 font-semibold">Novena</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
+              46.0
+            </span>
+          </td>
+          <td class='py-2 px-3'>58/100</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">6</td>
+          <td class="py-2 px-3 font-semibold">Mandai</td>
           <td class="py-2 px-3">
             <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
               45.9
             </span>
           </td>
-          <td class='py-2 px-3'>62/100</td>
+          <td class='py-2 px-3'>65/100</td>
         </tr><tr class="border-t border-[#DDD6FE]/30">
-          <td class="py-2 px-3 text-[#0F172A]/50">4</td>
-          <td class="py-2 px-3 font-semibold">Jurong West</td>
+          <td class="py-2 px-3 text-[#0F172A]/50">7</td>
+          <td class="py-2 px-3 font-semibold">Tengah</td>
           <td class="py-2 px-3">
-            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-rose-50 text-rose-700 border-rose-200">
-              44.8
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
+              45.7
             </span>
           </td>
           <td class='py-2 px-3'>63/100</td>
         </tr><tr class="border-t border-[#DDD6FE]/30">
-          <td class="py-2 px-3 text-[#0F172A]/50">5</td>
-          <td class="py-2 px-3 font-semibold">Downtown Core</td>
-          <td class="py-2 px-3">
-            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-rose-50 text-rose-700 border-rose-200">
-              43.8
-            </span>
-          </td>
-          <td class='py-2 px-3'>57/100</td>
-        </tr><tr class="border-t border-[#DDD6FE]/30">
-          <td class="py-2 px-3 text-[#0F172A]/50">6</td>
-          <td class="py-2 px-3 font-semibold">Mandai</td>
-          <td class="py-2 px-3">
-            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-rose-50 text-rose-700 border-rose-200">
-              43.3
-            </span>
-          </td>
-          <td class='py-2 px-3'>66/100</td>
-        </tr><tr class="border-t border-[#DDD6FE]/30">
-          <td class="py-2 px-3 text-[#0F172A]/50">7</td>
-          <td class="py-2 px-3 font-semibold">Straits View</td>
-          <td class="py-2 px-3">
-            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-rose-50 text-rose-700 border-rose-200">
-              43.3
-            </span>
-          </td>
-          <td class='py-2 px-3'>57/100</td>
-        </tr><tr class="border-t border-[#DDD6FE]/30">
           <td class="py-2 px-3 text-[#0F172A]/50">8</td>
-          <td class="py-2 px-3 font-semibold">Paya Lebar</td>
+          <td class="py-2 px-3 font-semibold">Woodlands</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
+              45.2
+            </span>
+          </td>
+          <td class='py-2 px-3'>64/100</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">9</td>
+          <td class="py-2 px-3 font-semibold">Central Water Catchment</td>
           <td class="py-2 px-3">
             <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-rose-50 text-rose-700 border-rose-200">
-              43.0
+              44.9
+            </span>
+          </td>
+          <td class='py-2 px-3'>62/100</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">10</td>
+          <td class="py-2 px-3 font-semibold">Sungei Kadut</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-rose-50 text-rose-700 border-rose-200">
+              44.6
             </span>
           </td>
           <td class='py-2 px-3'>60/100</td>
-        </tr><tr class="border-t border-[#DDD6FE]/30">
-          <td class="py-2 px-3 text-[#0F172A]/50">9</td>
-          <td class="py-2 px-3 font-semibold">Bukit Batok</td>
-          <td class="py-2 px-3">
-            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-rose-50 text-rose-700 border-rose-200">
-              43.0
-            </span>
-          </td>
-          <td class='py-2 px-3'>59/100</td>
-        </tr><tr class="border-t border-[#DDD6FE]/30">
-          <td class="py-2 px-3 text-[#0F172A]/50">10</td>
-          <td class="py-2 px-3 font-semibold">Geylang</td>
-          <td class="py-2 px-3">
-            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-rose-50 text-rose-700 border-rose-200">
-              42.7
-            </span>
-          </td>
-          <td class='py-2 px-3'>59/100</td>
         </tr></tbody>
     </table>
   </section>
@@ -178,37 +194,37 @@
       </tr></thead>
       <tbody><tr class="border-t border-[#DDD6FE]/30">
           <td class="py-2 px-3 text-[#0F172A]/50">1</td>
-          <td class="py-2 px-3 font-semibold">Jurong West</td>
-          <td class="py-2 px-3">
-            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-emerald-50 text-emerald-700 border-emerald-200">
-              72.4
-            </span>
-          </td>
-          <td class='py-2 px-3'>S$550,135</td>
-        </tr><tr class="border-t border-[#DDD6FE]/30">
-          <td class="py-2 px-3 text-[#0F172A]/50">2</td>
           <td class="py-2 px-3 font-semibold">Woodlands</td>
           <td class="py-2 px-3">
             <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-emerald-50 text-emerald-700 border-emerald-200">
-              69.8
+              74.1
             </span>
           </td>
           <td class='py-2 px-3'>S$557,346</td>
         </tr><tr class="border-t border-[#DDD6FE]/30">
-          <td class="py-2 px-3 text-[#0F172A]/50">3</td>
+          <td class="py-2 px-3 text-[#0F172A]/50">2</td>
           <td class="py-2 px-3 font-semibold">Yishun</td>
           <td class="py-2 px-3">
             <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-emerald-50 text-emerald-700 border-emerald-200">
-              69.7
+              73.4
             </span>
           </td>
           <td class='py-2 px-3'>S$557,554</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">3</td>
+          <td class="py-2 px-3 font-semibold">Jurong West</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-emerald-50 text-emerald-700 border-emerald-200">
+              73.0
+            </span>
+          </td>
+          <td class='py-2 px-3'>S$550,135</td>
         </tr><tr class="border-t border-[#DDD6FE]/30">
           <td class="py-2 px-3 text-[#0F172A]/50">4</td>
           <td class="py-2 px-3 font-semibold">Jurong East</td>
           <td class="py-2 px-3">
             <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-emerald-50 text-emerald-700 border-emerald-200">
-              69.6
+              71.1
             </span>
           </td>
           <td class='py-2 px-3'>S$564,104</td>
@@ -217,43 +233,43 @@
           <td class="py-2 px-3 font-semibold">Choa Chu Kang</td>
           <td class="py-2 px-3">
             <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-emerald-50 text-emerald-700 border-emerald-200">
-              69.2
+              70.1
             </span>
           </td>
           <td class='py-2 px-3'>S$556,989</td>
         </tr><tr class="border-t border-[#DDD6FE]/30">
           <td class="py-2 px-3 text-[#0F172A]/50">6</td>
-          <td class="py-2 px-3 font-semibold">Bukit Batok</td>
+          <td class="py-2 px-3 font-semibold">Sembawang</td>
           <td class="py-2 px-3">
-            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
-              64.2
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-emerald-50 text-emerald-700 border-emerald-200">
+              68.0
             </span>
           </td>
-          <td class='py-2 px-3'>S$626,014</td>
+          <td class='py-2 px-3'>S$616,589</td>
         </tr><tr class="border-t border-[#DDD6FE]/30">
           <td class="py-2 px-3 text-[#0F172A]/50">7</td>
           <td class="py-2 px-3 font-semibold">Bukit Panjang</td>
           <td class="py-2 px-3">
-            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
-              63.8
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-emerald-50 text-emerald-700 border-emerald-200">
+              67.8
             </span>
           </td>
           <td class='py-2 px-3'>S$582,005</td>
         </tr><tr class="border-t border-[#DDD6FE]/30">
           <td class="py-2 px-3 text-[#0F172A]/50">8</td>
-          <td class="py-2 px-3 font-semibold">Sembawang</td>
+          <td class="py-2 px-3 font-semibold">Bukit Batok</td>
           <td class="py-2 px-3">
             <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
-              62.2
+              64.4
             </span>
           </td>
-          <td class='py-2 px-3'>S$616,589</td>
+          <td class='py-2 px-3'>S$626,014</td>
         </tr><tr class="border-t border-[#DDD6FE]/30">
           <td class="py-2 px-3 text-[#0F172A]/50">9</td>
           <td class="py-2 px-3 font-semibold">Hougang</td>
           <td class="py-2 px-3">
             <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
-              60.8
+              64.0
             </span>
           </td>
           <td class='py-2 px-3'>S$630,992</td>
@@ -262,7 +278,7 @@
           <td class="py-2 px-3 font-semibold">Bedok</td>
           <td class="py-2 px-3">
             <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
-              59.3
+              63.1
             </span>
           </td>
           <td class='py-2 px-3'>S$657,665</td>
@@ -280,7 +296,7 @@
 </main>
 
 <footer class="bg-[#0F172A] text-white/50 py-6 text-center text-sm">
-  Snapshot generated 2026-09-06 21:54 SGT · SG Transit Liveability Index
+  Snapshot generated 2026-09-06 22:20 SGT · SG Transit Liveability Index
 </footer>
 
 </body>
