@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SG Transit Liveability — Demo Snapshot</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>body{font-family:'Inter',sans-serif;}</style>
+</head>
+<body class="bg-[#F8FAFC] text-[#0F172A] antialiased">
+
+<!-- Persistent "not live" banner -->
+<div class="bg-amber-50 border-b border-amber-200 text-amber-800 text-sm text-center py-2 px-4">
+  📸 Static demo snapshot — not a live feed · Data frozen at generation time · Last updated:
+  <strong>2026-09-06 21:54 SGT</strong>
+</div>
+
+<!-- One-time modal -->
+<div id="snapshot-modal" class="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4 hidden">
+  <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl">
+    <h3 class="font-bold text-lg mb-2">This is a snapshot, not a live page</h3>
+    <p class="text-sm text-[#0F172A]/65 leading-relaxed mb-4">
+      SG Transit Liveability Index is a real-time data pipeline (live taxi/bus polling,
+      ML forecasting, anomaly detection). This page shows real data captured at
+      <strong>2026-09-06 21:54 SGT</strong> — it will not change again until the page is regenerated.
+      The interactive version (live map, forecasts, alerts) runs locally.
+    </p>
+    <button onclick="document.getElementById('snapshot-modal').classList.add('hidden'); localStorage.setItem('sgSnapshotSeen','1')"
+      class="w-full bg-[#DDD6FE] text-[#0F172A] font-semibold py-2.5 rounded-xl hover:bg-violet-200 transition-colors text-sm">
+      Got it
+    </button>
+  </div>
+</div>
+<script>
+  if (!localStorage.getItem('sgSnapshotSeen')) {
+    document.getElementById('snapshot-modal').classList.remove('hidden');
+  }
+</script>
+
+<header class="max-w-5xl mx-auto px-5 pt-10 pb-6">
+  <a href="../index.html" class="text-sm text-violet-600 font-medium hover:underline">&larr; Back to portfolio</a>
+  <h1 class="text-3xl font-extrabold mt-4 mb-2">🏙️ SG Transit Liveability Index</h1>
+  <p class="text-[#0F172A]/60 max-w-2xl">Real-time transit connectivity + HDB value-for-money scoring across
+  all 55 Singapore planning areas. Snapshot generated 2026-09-06 21:54 SGT.</p>
+</header>
+
+<main class="max-w-5xl mx-auto px-5 pb-16 space-y-8">
+
+  <section class="grid grid-cols-3 gap-4">
+    <div class="bg-white rounded-2xl border border-[#DDD6FE]/40 p-5 text-center">
+      <div class="text-3xl font-extrabold text-violet-500">55</div>
+      <div class="text-xs font-medium text-[#0F172A]/55 mt-1">Districts Monitored</div>
+    </div>
+    <div class="bg-white rounded-2xl border border-[#DDD6FE]/40 p-5 text-center">
+      <div class="text-3xl font-extrabold text-sky-500">36</div>
+      <div class="text-xs font-medium text-[#0F172A]/55 mt-1">Avg Connectivity Score</div>
+    </div>
+    <div class="bg-white rounded-2xl border border-[#DDD6FE]/40 p-5 text-center">
+      <div class="text-3xl font-extrabold text-emerald-500">53</div>
+      <div class="text-xs font-medium text-[#0F172A]/55 mt-1">Avg Value-for-Money Score</div>
+    </div>
+  </section>
+
+  <section class="bg-white rounded-2xl border border-[#DDD6FE]/40 p-6">
+    <h2 class="font-bold text-lg mb-1">🏆 Connectivity Leaderboard · Top 10</h2>
+    <p class="text-xs text-[#0F172A]/50 mb-4">Live transit score: bus frequency × 50% + taxi stability × 30% − friction × 20%.</p>
+    <table class="w-full text-sm">
+      <thead><tr class="text-left">
+        <th class="py-2 px-3 font-semibold text-[#0F172A]/60">#</th>
+        <th class="py-2 px-3 font-semibold text-[#0F172A]/60">Town / District</th>
+        <th class="py-2 px-3 font-semibold text-[#0F172A]/60">Score</th>
+        <th class='text-left py-2 px-3 font-semibold text-[#0F172A]/60'>Bus Score</th>
+      </tr></thead>
+      <tbody><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">1</td>
+          <td class="py-2 px-3 font-semibold">Changi</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
+              53.9
+            </span>
+          </td>
+          <td class='py-2 px-3'>63/100</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">2</td>
+          <td class="py-2 px-3 font-semibold">Changi Bay</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
+              49.5
+            </span>
+          </td>
+          <td class='py-2 px-3'>65/100</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">3</td>
+          <td class="py-2 px-3 font-semibold">Boon Lay</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
+              45.9
+            </span>
+          </td>
+          <td class='py-2 px-3'>62/100</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">4</td>
+          <td class="py-2 px-3 font-semibold">Jurong West</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-rose-50 text-rose-700 border-rose-200">
+              44.8
+            </span>
+          </td>
+          <td class='py-2 px-3'>63/100</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">5</td>
+          <td class="py-2 px-3 font-semibold">Downtown Core</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-rose-50 text-rose-700 border-rose-200">
+              43.8
+            </span>
+          </td>
+          <td class='py-2 px-3'>57/100</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">6</td>
+          <td class="py-2 px-3 font-semibold">Mandai</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-rose-50 text-rose-700 border-rose-200">
+              43.3
+            </span>
+          </td>
+          <td class='py-2 px-3'>66/100</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">7</td>
+          <td class="py-2 px-3 font-semibold">Straits View</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-rose-50 text-rose-700 border-rose-200">
+              43.3
+            </span>
+          </td>
+          <td class='py-2 px-3'>57/100</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">8</td>
+          <td class="py-2 px-3 font-semibold">Paya Lebar</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-rose-50 text-rose-700 border-rose-200">
+              43.0
+            </span>
+          </td>
+          <td class='py-2 px-3'>60/100</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">9</td>
+          <td class="py-2 px-3 font-semibold">Bukit Batok</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-rose-50 text-rose-700 border-rose-200">
+              43.0
+            </span>
+          </td>
+          <td class='py-2 px-3'>59/100</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">10</td>
+          <td class="py-2 px-3 font-semibold">Geylang</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-rose-50 text-rose-700 border-rose-200">
+              42.7
+            </span>
+          </td>
+          <td class='py-2 px-3'>59/100</td>
+        </tr></tbody>
+    </table>
+  </section>
+
+  <section class="bg-white rounded-2xl border border-[#DDD6FE]/40 p-6">
+    <h2 class="font-bold text-lg mb-1">💰 Value-for-Money Ranking · Top 10</h2>
+    <p class="text-xs text-[#0F172A]/50 mb-4">Blends transit connectivity with relative HDB resale-price affordability (50/50).</p>
+    <table class="w-full text-sm">
+      <thead><tr class="text-left">
+        <th class="py-2 px-3 font-semibold text-[#0F172A]/60">#</th>
+        <th class="py-2 px-3 font-semibold text-[#0F172A]/60">Town / District</th>
+        <th class="py-2 px-3 font-semibold text-[#0F172A]/60">Score</th>
+        <th class='text-left py-2 px-3 font-semibold text-[#0F172A]/60'>Avg Price</th>
+      </tr></thead>
+      <tbody><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">1</td>
+          <td class="py-2 px-3 font-semibold">Jurong West</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-emerald-50 text-emerald-700 border-emerald-200">
+              72.4
+            </span>
+          </td>
+          <td class='py-2 px-3'>S$550,135</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">2</td>
+          <td class="py-2 px-3 font-semibold">Woodlands</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-emerald-50 text-emerald-700 border-emerald-200">
+              69.8
+            </span>
+          </td>
+          <td class='py-2 px-3'>S$557,346</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">3</td>
+          <td class="py-2 px-3 font-semibold">Yishun</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-emerald-50 text-emerald-700 border-emerald-200">
+              69.7
+            </span>
+          </td>
+          <td class='py-2 px-3'>S$557,554</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">4</td>
+          <td class="py-2 px-3 font-semibold">Jurong East</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-emerald-50 text-emerald-700 border-emerald-200">
+              69.6
+            </span>
+          </td>
+          <td class='py-2 px-3'>S$564,104</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">5</td>
+          <td class="py-2 px-3 font-semibold">Choa Chu Kang</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-emerald-50 text-emerald-700 border-emerald-200">
+              69.2
+            </span>
+          </td>
+          <td class='py-2 px-3'>S$556,989</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">6</td>
+          <td class="py-2 px-3 font-semibold">Bukit Batok</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
+              64.2
+            </span>
+          </td>
+          <td class='py-2 px-3'>S$626,014</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">7</td>
+          <td class="py-2 px-3 font-semibold">Bukit Panjang</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
+              63.8
+            </span>
+          </td>
+          <td class='py-2 px-3'>S$582,005</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">8</td>
+          <td class="py-2 px-3 font-semibold">Sembawang</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
+              62.2
+            </span>
+          </td>
+          <td class='py-2 px-3'>S$616,589</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">9</td>
+          <td class="py-2 px-3 font-semibold">Hougang</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
+              60.8
+            </span>
+          </td>
+          <td class='py-2 px-3'>S$630,992</td>
+        </tr><tr class="border-t border-[#DDD6FE]/30">
+          <td class="py-2 px-3 text-[#0F172A]/50">10</td>
+          <td class="py-2 px-3 font-semibold">Bedok</td>
+          <td class="py-2 px-3">
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-semibold border bg-amber-50 text-amber-700 border-amber-200">
+              59.3
+            </span>
+          </td>
+          <td class='py-2 px-3'>S$657,665</td>
+        </tr></tbody>
+    </table>
+  </section>
+
+  <section class="text-center py-6">
+    <a href="https://github.com/hm-base/sg-transit-liveability" target="_blank" rel="noopener"
+       class="inline-flex items-center gap-2 bg-[#DDD6FE] text-[#0F172A] font-semibold px-6 py-3 rounded-full hover:bg-violet-200 transition-all text-sm">
+      View Full Source on GitHub
+    </a>
+  </section>
+
+</main>
+
+<footer class="bg-[#0F172A] text-white/50 py-6 text-center text-sm">
+  Snapshot generated 2026-09-06 21:54 SGT · SG Transit Liveability Index
+</footer>
+
+</body>
+</html>
