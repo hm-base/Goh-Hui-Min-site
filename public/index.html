@@ -17,11 +17,10 @@
   <meta property="og:image:alt" content="Hui Min Goh, Data Analyst, Singapore">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="tailwind.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="fonts/inter-latin-var.woff" as="font" type="font/woff" crossorigin>
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 800; font-display: swap; src: url(fonts/inter-latin-var.woff) format('woff'); }
+    body { font-family: 'Inter', system-ui, 'Segoe UI', sans-serif; }
     ::-webkit-scrollbar { width: 5px; }
     ::-webkit-scrollbar-track { background: #F8FAFC; }
     ::-webkit-scrollbar-thumb { background: #DDD6FE; border-radius: 3px; }
