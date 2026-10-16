@@ -4,7 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SG Transit Liveability — Demo Snapshot</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<meta name="description" content="Static demo snapshot of the SG Transit Liveability Index: live taxi/bus data combined with HDB resale prices across Singapore's 55 planning areas.">
+<meta name="theme-color" content="#F8FAFC">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SG Transit Liveability — Demo Snapshot">
+<meta property="og:description" content="Static demo snapshot of a live taxi/bus + HDB resale data pipeline for Singapore.">
+<meta property="og:url" content="https://hm-base.github.io/Goh-Hui-Min-site/sg-transit/">
+<meta property="og:image" content="https://hm-base.github.io/Goh-Hui-Min-site/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../tailwind.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>body{font-family:'Inter',sans-serif;}</style>
 </head>
@@ -17,9 +26,9 @@
 </div>
 
 <!-- One-time modal -->
-<div id="snapshot-modal" class="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4 hidden">
+<div id="snapshot-modal" role="dialog" aria-modal="true" aria-labelledby="snapshot-title" class="fixed inset-0 bg-black/40 z-50 flex items-center justify-center p-4 hidden">
   <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-xl">
-    <h3 class="font-bold text-lg mb-2">This is a snapshot, not a live page</h3>
+    <h3 id="snapshot-title" class="font-bold text-lg mb-2">This is a snapshot, not a live page</h3>
     <p class="text-sm text-[#0F172A]/65 leading-relaxed mb-4">
       SG Transit Liveability Index is a real-time data pipeline (live taxi/bus polling,
       ML forecasting, anomaly detection). This page shows real data captured at
@@ -41,7 +50,7 @@
 <header class="max-w-5xl mx-auto px-5 pt-10 pb-6">
   <a href="../index.html" class="text-sm text-violet-600 font-medium hover:underline">&larr; Back to portfolio</a>
   <h1 class="text-3xl font-extrabold mt-4 mb-2">🏙️ SG Transit Liveability Index</h1>
-  <p class="text-[#0F172A]/60 max-w-2xl">Real-time transit connectivity + HDB value-for-money scoring across
+  <p class="text-[#0F172A]/65 max-w-2xl">Real-time transit connectivity + HDB value-for-money scoring across
   all 55 Singapore planning areas. Snapshot generated 2026-09-06 22:20 SGT.</p>
 </header>
 
@@ -65,16 +74,16 @@
 
   <section class="grid grid-cols-3 gap-4">
     <div class="bg-white rounded-2xl border border-[#DDD6FE]/40 p-5 text-center">
-      <div class="text-3xl font-extrabold text-violet-500">55</div>
-      <div class="text-xs font-medium text-[#0F172A]/55 mt-1">Districts Monitored</div>
+      <div class="text-3xl font-extrabold text-violet-600">55</div>
+      <div class="text-xs font-medium text-[#0F172A]/65 mt-1">Districts Monitored</div>
     </div>
     <div class="bg-white rounded-2xl border border-[#DDD6FE]/40 p-5 text-center">
-      <div class="text-3xl font-extrabold text-sky-500">39</div>
-      <div class="text-xs font-medium text-[#0F172A]/55 mt-1">Avg Connectivity Score</div>
+      <div class="text-3xl font-extrabold text-sky-700">39</div>
+      <div class="text-xs font-medium text-[#0F172A]/65 mt-1">Avg Connectivity Score</div>
     </div>
     <div class="bg-white rounded-2xl border border-[#DDD6FE]/40 p-5 text-center">
       <div class="text-3xl font-extrabold text-emerald-500">56</div>
-      <div class="text-xs font-medium text-[#0F172A]/55 mt-1">Avg Value-for-Money Score</div>
+      <div class="text-xs font-medium text-[#0F172A]/65 mt-1">Avg Value-for-Money Score</div>
     </div>
   </section>
 
@@ -83,10 +92,10 @@
     <p class="text-xs text-[#0F172A]/50 mb-4">Live transit score: bus frequency × 50% + taxi stability × 30% − friction × 20%.</p>
     <table class="w-full text-sm">
       <thead><tr class="text-left">
-        <th class="py-2 px-3 font-semibold text-[#0F172A]/60">#</th>
-        <th class="py-2 px-3 font-semibold text-[#0F172A]/60">Town / District</th>
-        <th class="py-2 px-3 font-semibold text-[#0F172A]/60">Score</th>
-        <th class='text-left py-2 px-3 font-semibold text-[#0F172A]/60'>Bus Score</th>
+        <th class="py-2 px-3 font-semibold text-[#0F172A]/65">#</th>
+        <th class="py-2 px-3 font-semibold text-[#0F172A]/65">Town / District</th>
+        <th class="py-2 px-3 font-semibold text-[#0F172A]/65">Score</th>
+        <th class='text-left py-2 px-3 font-semibold text-[#0F172A]/65'>Bus Score</th>
       </tr></thead>
       <tbody><tr class="border-t border-[#DDD6FE]/30">
           <td class="py-2 px-3 text-[#0F172A]/50">1</td>
@@ -187,10 +196,10 @@
     <p class="text-xs text-[#0F172A]/50 mb-4">Blends transit connectivity with relative HDB resale-price affordability (50/50).</p>
     <table class="w-full text-sm">
       <thead><tr class="text-left">
-        <th class="py-2 px-3 font-semibold text-[#0F172A]/60">#</th>
-        <th class="py-2 px-3 font-semibold text-[#0F172A]/60">Town / District</th>
-        <th class="py-2 px-3 font-semibold text-[#0F172A]/60">Score</th>
-        <th class='text-left py-2 px-3 font-semibold text-[#0F172A]/60'>Avg Price</th>
+        <th class="py-2 px-3 font-semibold text-[#0F172A]/65">#</th>
+        <th class="py-2 px-3 font-semibold text-[#0F172A]/65">Town / District</th>
+        <th class="py-2 px-3 font-semibold text-[#0F172A]/65">Score</th>
+        <th class='text-left py-2 px-3 font-semibold text-[#0F172A]/65'>Avg Price</th>
       </tr></thead>
       <tbody><tr class="border-t border-[#DDD6FE]/30">
           <td class="py-2 px-3 text-[#0F172A]/50">1</td>
