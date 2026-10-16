@@ -1,5 +1,6 @@
 # Goh Hui Min-site: personal portfolio
-Plain HTML + Tailwind via CDN, with inline vanilla JS in `public/index.html`. No build step.
+Plain HTML + Tailwind (compiled to `public/tailwind.css` with the standalone CLI) and inline vanilla JS in `public/index.html`. No build step on deploy.
+After adding/changing Tailwind classes, rebuild: `tailwindcss -c tailwind.config.js -i src/input.css -o public/tailwind.css --minify` (see README).
 Deploy: push to main, GitHub Actions publishes `public/` to GitHub Pages.
 Live: https://hm-base.github.io/Goh-Hui-Min-site/
 

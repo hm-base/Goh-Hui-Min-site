@@ -9,3 +9,7 @@ desktop.ini
 # Editor directories
 .vscode/
 .idea/
+
+# Tailwind standalone CLI binary (download separately, see README)
+tailwindcss
+tailwindcss-*.exe
